@@ -18,7 +18,13 @@
                             {% for i in 1..war.numEnemies %}
                                 <tr>
                                     <td>{{ i }}.</td>
-                                    <td>{{ best_scores_array[i] is defined ? best_scores_array[i] : 0 }} stars</td>
+                                    
+                                    {% if best_scores_array[i] is defined %}
+                                    <td data-score="{{ best_scores_array[i] }}" class="score-{{ best_scores_array[i] }}">{{ best_scores_array[i] }} stars</td>
+                                    {% else %}
+                                    <td data-score="0" class="score-0">0 stars</td>
+                                    {% endif %}
+                                    
                                     {% if reservations[i] is defined %}
                                     <td>
                                         <span>{{ reservations[i].name }}</span>
@@ -41,9 +47,9 @@
                                         </select>
                                         <button>Reservar</button>
                                         </form>
-                                    </td>
-                                    
+                                    </td>                                    
                                     {% endif %}
+                                    
                                     <td>
                                         {% if battles_array[i] is defined %}
                                         {% for b in battles_array[i] %}
@@ -64,5 +70,8 @@
     </div>    
 </div>
     
+<script>
+$('.score-3').parent().addClass('bg-success');
+</script>
 
 {% endblock %}
