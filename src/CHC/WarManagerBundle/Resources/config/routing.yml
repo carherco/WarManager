@@ -1,0 +1,31 @@
+chc_war_manager_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CHCWarManagerBundle:Default:index }
+    
+chc_war_manager_dashboard:
+    path:     /dashboard
+    defaults: { _controller: CHCWarManagerBundle:Default:dashboard }
+
+chc_war_manager_reservations:
+    path:     /reservations
+    defaults: { _controller: CHCWarManagerBundle:Default:reservations }
+    
+chc_war_manager_reservations:
+    path:     /reservations
+    defaults: { _controller: CHCWarManagerBundle:Default:reservations }
+    
+chc_war_manager_reserve:
+    path:     /reserve/{enemyPosition}
+    defaults: { _controller: CHCWarManagerBundle:Default:reserve }
+    
+chc_war_manager_unreserve:
+    path:     /unreserve/{reservation_id}
+    defaults: { _controller: CHCWarManagerBundle:Default:unreserve }
+    
+chc_war_manager_score:
+    path:     /score/{reservation_id}/{score}
+    defaults: { _controller: CHCWarManagerBundle:Default:score }
+    
+chc_war_manager_unscore:
+    path:     /unscore/{battle_id}
+    defaults: { _controller: CHCWarManagerBundle:Default:unscore }

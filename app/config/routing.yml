@@ -1,0 +1,7 @@
+chc_war_manager:
+    resource: "@CHCWarManagerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
