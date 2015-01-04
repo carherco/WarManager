@@ -1,0 +1,51 @@
+{% extends 'CHCWarManagerBundle::layout.html.twig' %}
+
+
+{% block content %}
+
+    <h1>War against {{ war.enemyClan.name }} ({{ war.numEnemies }} villages)</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="widget">
+            <div class="widget-title">
+                <i class="fa fa-tasks"></i> Reservas de batallas
+            </div>
+            <div class="widget-body no-padding">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            {% for i in 1..war.numEnemies %}
+                                <tr>
+                                    <td>{{ i }}.</td>
+                                    <td>{{ best_scores_array[i] is defined ? best_scores_array[i] : 0 }} stars</td>
+                                    {% if reservations[i] is defined %}
+                                    <td>
+                                        <span>{{ reservations[i].name }}</span>
+                                    </td>             
+                                    {% else %}
+                                    <td>
+                                        <span>(free)</span>
+                                    </td>                                    
+                                    {% endif %}
+                                    <td>
+                                        {% if battles_array[i] is defined %}
+                                        {% for b in battles_array[i] %}
+                                        <span>
+                                            <span>{{ b.clan_village_name }}: {{ b.score }} stars</span>                                            
+                                        </span>  
+                                        {% endfor %}
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+    
+
+{% endblock %}

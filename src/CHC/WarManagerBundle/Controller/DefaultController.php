@@ -6,9 +6,49 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function viewAction()
     {
-        return $this->render('CHCWarManagerBundle:Default:index.html.twig', array('name' => $name));
+        $war_id = 1;
+        $war = $this->getDoctrine()
+            ->getRepository('CHCWarManagerBundle:War')
+            ->find($war_id);
+        
+        $villages_array = array();
+        foreach ($war->getClan()->getVillages() as $village) {
+            $villages_array[$village->getId()] = array('id'=>$village->getId(),'name'=>$village->getName());
+        }
+        
+        $free_villages = $villages_array;
+        
+        $reservations = $war->getReservations();
+        
+        $reservations_array = array();
+        foreach ($reservations as $reservation) {
+            $reservations_array[$reservation->getEnemyVillagePosition()] = array('id'=>$reservation->getId(),'village_id'=>$reservation->getClanVillage()->getId(),'name'=>$reservation->getClanVillage()->getName());
+            unset($free_villages[$reservation->getClanVillage()->getId()]);
+        }
+        
+        $best_scores_array = array();
+        $battles_array = array();
+        
+        foreach ($war->getBattles() as $battle) {
+            $battles_array[$battle->getEnemyVillagePosition()][] = array('id'=>$battle->getId(),
+                                                                  'clan_village_name'=>$battle->getClanVillage()->getName(),
+                                                                  'score'=>$battle->getScore(),
+                    );
+            if(!isset($best_scores_array[$battle->getEnemyVillagePosition()])){
+                $best_scores_array[$battle->getEnemyVillagePosition()] = 0;
+            }
+            $best_scores_array[$battle->getEnemyVillagePosition()] = max($battle->getScore(),$best_scores_array[$battle->getEnemyVillagePosition()]);
+        }
+        
+        return $this->render('CHCWarManagerBundle:Default:view.html.twig', array(
+            'war' => $war,
+            'reservations' => $reservations_array,
+            'free_villages' => $free_villages,
+            'battles_array' => $battles_array,
+            'best_scores_array' => $best_scores_array,
+                ));
     }
     
     public function reservationsAction()

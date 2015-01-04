@@ -1,11 +1,7 @@
-chc_war_manager_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: CHCWarManagerBundle:Default:index }
+chc_war_manager_view:
+    path:     /
+    defaults: { _controller: CHCWarManagerBundle:Default:view }
     
-chc_war_manager_dashboard:
-    path:     /dashboard
-    defaults: { _controller: CHCWarManagerBundle:Default:dashboard }
-
 chc_war_manager_reservations:
     path:     /reservations
     defaults: { _controller: CHCWarManagerBundle:Default:reservations }
