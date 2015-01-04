@@ -1,0 +1,364 @@
+body {
+    padding:0;
+    padding-bottom:20px;
+    margin: 0;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color:#333;
+    background-color:#000;
+    /*background-image:url(../images/sunset_sky_night.jpg);*/
+    background-repeat:no-repeat;
+    background-position:center top;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+
+}
+
+#header{
+    /*height:60px;*/
+    width: 80%;
+    max-width: 1024px;
+    height:106px;
+    /*background-image:url(../images/hombrelobo.png);*/
+    background-repeat:no-repeat;
+    background-position:0 0;
+    margin:0 auto;
+}
+
+#nav{
+    width:1024px;
+    margin:0 auto;
+    padding:20px 0 0 0;
+
+}
+
+#nav_login{
+    padding-top: 30px;
+    float:right;
+}
+
+#nav-user{
+    width: 200px;
+    float: left;
+    clear: both;
+}
+
+#user{
+    float: right;
+    display: block;
+    margin: 0 15px 10px;
+
+
+}
+
+
+
+.vertical{
+  width: 50px;
+  height: 60px;
+  /*line-height: 10px;*/
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari and Chrome */
+  -o-transform: rotate(90deg); /* Opera */
+  -moz-transform: rotate(90deg); /* Firefox */
+}
+
+th, td{
+  /*width: 10px;*/
+  border: 1px solid #666666;
+  vertical-align: center;
+}
+
+.votado{
+  background-color: green;
+}
+
+#contador{
+    display: block;
+    padding-top: 30px;
+    float:right;
+    clear:both;
+}
+
+#content_killer{
+    width: 80%;
+    max-width: 1024px;
+    font-size:100%;
+    margin:0 auto;
+    background: url("../images/content-background.png") repeat scroll 0 0 transparent;
+    border: 1px solid #FFFFFF;
+    min-height: 500px;
+    padding-bottom: 25px;    		
+}
+
+#main_content{        
+    margin: 0 25px 0 15px;
+
+}
+
+#main_content h1, #content-user h1{
+    font-family: Oswald;
+    font-weight: 700;
+    color: #C5003D;
+}
+
+#main_content h2, #content-user h2{
+    font-family: Oswald;
+    font-weight: 300;
+    margin: 20px 0 15px 0;
+
+}
+
+#content-user h3{
+    font-family: Oswald;
+    font-weight: 200;
+
+}
+
+
+#content-objetivo{
+    /*width: 100%;*/
+    margin: 0 15px 0 30px;
+    background-color: #F5F5F5;
+    border-style: solid;
+    border-color: #D3D3D3;
+    border-width: 1px;
+    display: block;
+    float: left;
+    padding: 15px 10px;
+}
+
+#content-user{
+    width: 100%;
+    margin: 0 15px 0 30px;
+    display: block;
+    float: left;
+}
+
+#objetivo{
+    width: 780px;
+    margin: 15px auto;
+}
+
+#foto_jugador{
+    margin-left: 80px;
+    padding: 10px 10px 25px 10px;
+    background: #eee;
+    border: 1px solid #fff;
+
+}
+
+#foto_victima{
+    margin-left: 80px;
+    padding: 10px 10px 25px 10px;
+    background: #eee;
+    border: 1px solid #fff;
+}
+
+#jugador{
+    float:left; 
+    margin: 50px 0 0 0;  
+    width:150px; 
+    height: 150px; 
+    cursor: pointer;
+}
+#jugador p{
+    width: 100px;
+    margin: -20px 0 0 10px;
+    text-align: left;
+    font-family: Oswald;   
+}
+
+.foto_visitas{
+    padding: 10px 10px 25px 10px;
+    background: #eee;
+    border: 1px solid #fff;
+    width: 90px;
+}
+
+.pic-1{
+    z-index: 1;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+
+.pic-2{
+    z-index: 2;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+}
+
+#flecha_objetivo{
+    margin-left: 80px;
+}
+
+#ficha_jugador, #ficha_victima{
+    width: 650px; 
+    background-image:url(../images/clip2.png);
+    background-repeat:no-repeat;
+    font-family: Courier;
+}
+
+.ficha{
+    margin-top: 30px;
+
+}
+
+.ficha h2{
+    margin-left: 175px;
+}
+
+.dl-horizontal dt, .dl-horizontal dd{
+    margin-top: 5px;
+    margin-right: 50px;
+}
+
+#ficha_ajax{
+    position: absolute;
+    z-index: 20;
+    display: none;
+    border: 1px solid #DDD;
+    background-color: white;
+    background-image:url(../images/clip.png);
+    background-repeat:no-repeat;
+    width: 500px;
+    padding: 5px;
+    font-family: Courier;
+}
+
+#ficha_ajax dt{
+    margin-top: 5px;
+    width: 100px;
+}
+
+#ficha_ajax dd{
+    margin-top: 5px;
+    margin-left: 120px;
+    margin-right: 10px;
+}
+
+#confirmacionMuerteForm .control-label{
+    width: 100px;
+}
+
+#confirmacionMuerteForm .controls{
+    margin-left: 130px;
+}
+
+
+/* Clearing the float */
+.autoclear:after{
+    content: "";
+    display:block;
+    height:0;
+    clear:both;
+}
+
+.autoclear{
+    height:100%;
+}
+
+.alpha75 {
+    opacity: 0.75;
+    filter:alpha(opacity=75);
+}
+
+.alpha25 {
+    opacity: 0.25;
+    filter:alpha(opacity=25);
+}
+
+.rounded-corners{
+    border-radius: 10px;
+    -mz-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+}
+
+.sobre {
+    position:absolute;
+    top:0px;
+    left:0px;
+    border:none;
+    z-index: 0;
+}
+
+.badge-comentarios{
+    cursor:pointer;
+}
+
+.fila_ranking{
+  min-height: 150px;
+  margin: auto;
+}
+
+.foto_ranking{
+  float: left;
+  padding: 10px 10px 25px 10px;
+  background: #eee;
+  border: 1px solid #fff;
+  width: 90px;
+}
+
+#ranking1{
+    width: 720px;
+    border-bottom: 100px solid rgba(6, 53, 64, .5); 
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    height: 0;
+}
+#ranking2{
+    width: 570px;
+    border-bottom: 100px solid rgba(6, 53, 64, .6); 
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    height: 0;
+}
+#ranking3{
+    width: 470px;
+    border-bottom: 100px solid rgba(6, 53, 64, .7); 
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    height: 0;
+}
+#ranking4{
+    width: 320px;
+    border-bottom: 100px solid rgba(6, 53, 64, .8); 
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    height: 0;
+}
+#ranking5{
+    width: 170px;
+    border-bottom: 100px solid rgba(6, 53, 64, .9); 
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    height: 0;
+}
+#ranking6{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #063540;
+}
+
+#card{
+    float:left;
+    margin: 10px 0 10px 25px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+}
+
+#rol{
+    float: right;
+    width: 500px;
+    padding: 15px 10px;
+}
