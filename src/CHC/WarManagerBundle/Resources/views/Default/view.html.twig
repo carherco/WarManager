@@ -27,7 +27,7 @@
                                     
                                     {% if reservations[i] is defined %}
                                     <td>
-                                        <span>{{ reservations[i].name }}</span>
+                                        <span class="text-primary"><strong>{{ reservations[i].name }}</strong></span>
                                     </td>             
                                     {% else %}
                                     <td>
@@ -55,6 +55,8 @@
     
 <script>
 $('.score-3').parent().addClass('bg-success');
+$('.score-2').parent().addClass('bg-info');
+$('.score-1').parent().addClass('bg-warning');
 </script>
 
 {% endblock %}
