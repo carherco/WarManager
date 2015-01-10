@@ -60,7 +60,7 @@ class DefaultController extends Controller
         
         $villages_array = array();
         foreach ($war->getClan()->getVillages() as $village) {
-            $villages_array[$village->getId()] = array('id'=>$village->getId(),'name'=>$village->getName());
+            $villages_array[$village->getId()] = array('name'=>$village->getName(),'id'=>$village->getId());
         }
         
         $free_villages = $villages_array;
