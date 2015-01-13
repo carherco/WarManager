@@ -8,7 +8,7 @@ class DefaultController extends Controller
 {
     public function viewAction()
     {
-        $war_id = 3;
+        $war_id = 4;
         $war = $this->getDoctrine()
             ->getRepository('CHCWarManagerBundle:War')
             ->find($war_id);
@@ -53,7 +53,7 @@ class DefaultController extends Controller
     
     public function reservationsAction()
     {
-        $war_id = 3;
+        $war_id = 4;
         $war = $this->getDoctrine()
             ->getRepository('CHCWarManagerBundle:War')
             ->find($war_id);
@@ -106,7 +106,7 @@ class DefaultController extends Controller
         /** @todo Comprobar enemy_id está disponible */
         /** @todo Comprobar village_id no tiene otras reservas */ 
             
-            $war_id = 3;
+            $war_id = 4;
             $war = $this->getDoctrine()
                 ->getRepository('CHCWarManagerBundle:War')
                 ->find($war_id);
